@@ -1,0 +1,437 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C16DDD63-2719-47FB-975D-E559BFF6A886}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Proje.Web</RootNamespace>
+    <AssemblyName>Proje.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44325</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminAddCategory.aspx" />
+    <Content Include="AdminAddProduct.aspx" />
+    <Content Include="AdminCancelOrder.aspx" />
+    <Content Include="AdminCategories.aspx" />
+    <Content Include="AdminLogin.aspx" />
+    <Content Include="AdminOrders.aspx" />
+    <Content Include="AdminPaymentOrder.aspx" />
+    <Content Include="AdminProducts.aspx" />
+    <Content Include="AdminRemoveCategory.aspx" />
+    <Content Include="AdminRemoveProduct.aspx" />
+    <Content Include="AdminUpdateCategory.aspx" />
+    <Content Include="AdminUpdateProduct.aspx" />
+    <Content Include="AdminUpdateStatusOrder.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="DefaultAddCart.aspx" />
+    <Content Include="DefaultAddOrder.aspx" />
+    <Content Include="DefaultFilterProduct.aspx" />
+    <Content Include="DefaultRemoveProductInCart.aspx" />
+    <Content Include="DefaultSelectedTable.aspx" />
+    <Content Include="template\blog-details.html" />
+    <Content Include="template\blog.html" />
+    <Content Include="template\checkout.html" />
+    <Content Include="template\contact.html" />
+    <Content Include="template\css\bootstrap.min.css" />
+    <Content Include="template\css\elegant-icons.css" />
+    <Content Include="template\css\font-awesome.min.css" />
+    <Content Include="template\css\jquery-ui.min.css" />
+    <Content Include="template\css\nice-select.css" />
+    <Content Include="template\css\owl.carousel.min.css" />
+    <Content Include="template\css\slicknav.min.css" />
+    <Content Include="template\css\style.css" />
+    <Content Include="template\fonts\ElegantIcons.svg" />
+    <Content Include="template\fonts\fontawesome-webfont.svg" />
+    <Content Include="template\img\banner\banner-1.jpg" />
+    <Content Include="template\img\banner\banner-2.jpg" />
+    <Content Include="template\img\blog\blog-1.jpg" />
+    <Content Include="template\img\blog\blog-2.jpg" />
+    <Content Include="template\img\blog\blog-3.jpg" />
+    <Content Include="template\img\blog\blog-4.jpg" />
+    <Content Include="template\img\blog\blog-5.jpg" />
+    <Content Include="template\img\blog\blog-6.jpg" />
+    <Content Include="template\img\blog\details\details-author.jpg" />
+    <Content Include="template\img\blog\details\details-hero.jpg" />
+    <Content Include="template\img\blog\details\details-pic.jpg" />
+    <Content Include="template\img\blog\sidebar\sr-1.jpg" />
+    <Content Include="template\img\blog\sidebar\sr-2.jpg" />
+    <Content Include="template\img\blog\sidebar\sr-3.jpg" />
+    <Content Include="template\img\breadcrumb.jpg" />
+    <Content Include="template\img\cart\cart-1.jpg" />
+    <Content Include="template\img\cart\cart-2.jpg" />
+    <Content Include="template\img\cart\cart-3.jpg" />
+    <Content Include="template\img\categories\cat-1.jpg" />
+    <Content Include="template\img\categories\cat-2.jpg" />
+    <Content Include="template\img\categories\cat-3.jpg" />
+    <Content Include="template\img\categories\cat-4.jpg" />
+    <Content Include="template\img\categories\cat-5.jpg" />
+    <Content Include="template\img\coldbrew.jpg" />
+    <Content Include="template\img\featured\feature-1.jpg" />
+    <Content Include="template\img\featured\feature-2.jpg" />
+    <Content Include="template\img\featured\feature-3.jpg" />
+    <Content Include="template\img\featured\feature-4.jpg" />
+    <Content Include="template\img\featured\feature-5.jpg" />
+    <Content Include="template\img\featured\feature-6.jpg" />
+    <Content Include="template\img\featured\feature-7.jpg" />
+    <Content Include="template\img\featured\feature-8.jpg" />
+    <Content Include="template\img\filtrekahve.jpg" />
+    <Content Include="template\img\hero\banner.jpg" />
+    <Content Include="template\img\language.png" />
+    <Content Include="template\img\latest-product\lp-1.jpg" />
+    <Content Include="template\img\latest-product\lp-2.jpg" />
+    <Content Include="template\img\latest-product\lp-3.jpg" />
+    <Content Include="template\img\limonata.jpg" />
+    <Content Include="template\img\logo.png" />
+    <Content Include="template\img\mocha.jpg" />
+    <Content Include="template\img\payment-item.png" />
+    <Content Include="template\img\product\details\product-details-1.jpg" />
+    <Content Include="template\img\product\details\product-details-2.jpg" />
+    <Content Include="template\img\product\details\product-details-3.jpg" />
+    <Content Include="template\img\product\details\product-details-4.jpg" />
+    <Content Include="template\img\product\details\product-details-5.jpg" />
+    <Content Include="template\img\product\details\thumb-1.jpg" />
+    <Content Include="template\img\product\details\thumb-2.jpg" />
+    <Content Include="template\img\product\details\thumb-3.jpg" />
+    <Content Include="template\img\product\details\thumb-4.jpg" />
+    <Content Include="template\img\product\discount\pd-1.jpg" />
+    <Content Include="template\img\product\discount\pd-2.jpg" />
+    <Content Include="template\img\product\discount\pd-3.jpg" />
+    <Content Include="template\img\product\discount\pd-4.jpg" />
+    <Content Include="template\img\product\discount\pd-5.jpg" />
+    <Content Include="template\img\product\discount\pd-6.jpg" />
+    <Content Include="template\img\product\product-1.jpg" />
+    <Content Include="template\img\product\product-10.jpg" />
+    <Content Include="template\img\product\product-11.jpg" />
+    <Content Include="template\img\product\product-12.jpg" />
+    <Content Include="template\img\product\product-2.jpg" />
+    <Content Include="template\img\product\product-3.jpg" />
+    <Content Include="template\img\product\product-4.jpg" />
+    <Content Include="template\img\product\product-5.jpg" />
+    <Content Include="template\img\product\product-6.jpg" />
+    <Content Include="template\img\product\product-7.jpg" />
+    <Content Include="template\img\product\product-8.jpg" />
+    <Content Include="template\img\product\product-9.jpg" />
+    <Content Include="template\index.html" />
+    <Content Include="template\js\bootstrap.min.js" />
+    <Content Include="template\js\jquery-3.3.1.min.js" />
+    <Content Include="template\js\jquery-ui.min.js" />
+    <Content Include="template\js\jquery.nice-select.min.js" />
+    <Content Include="template\js\jquery.slicknav.js" />
+    <Content Include="template\js\main.js" />
+    <Content Include="template\js\mixitup.min.js" />
+    <Content Include="template\js\owl.carousel.min.js" />
+    <Content Include="template\main.html" />
+    <Content Include="template\readme.txt" />
+    <Content Include="template\shop-details.html" />
+    <Content Include="template\shop-grid.html" />
+    <Content Include="template\shoping-cart.html" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminAddCategory.aspx.cs">
+      <DependentUpon>AdminAddCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminAddCategory.aspx.designer.cs">
+      <DependentUpon>AdminAddCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminAddProduct.aspx.cs">
+      <DependentUpon>AdminAddProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminAddProduct.aspx.designer.cs">
+      <DependentUpon>AdminAddProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCancelOrder.aspx.cs">
+      <DependentUpon>AdminCancelOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCancelOrder.aspx.designer.cs">
+      <DependentUpon>AdminCancelOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCategories.aspx.cs">
+      <DependentUpon>AdminCategories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCategories.aspx.designer.cs">
+      <DependentUpon>AdminCategories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminLogin.aspx.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminLogin.aspx.designer.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminOrders.aspx.cs">
+      <DependentUpon>AdminOrders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminOrders.aspx.designer.cs">
+      <DependentUpon>AdminOrders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaymentOrder.aspx.cs">
+      <DependentUpon>AdminPaymentOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaymentOrder.aspx.designer.cs">
+      <DependentUpon>AdminPaymentOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminProducts.aspx.cs">
+      <DependentUpon>AdminProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminProducts.aspx.designer.cs">
+      <DependentUpon>AdminProducts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminRemoveCategory.aspx.cs">
+      <DependentUpon>AdminRemoveCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminRemoveCategory.aspx.designer.cs">
+      <DependentUpon>AdminRemoveCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminRemoveProduct.aspx.cs">
+      <DependentUpon>AdminRemoveProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminRemoveProduct.aspx.designer.cs">
+      <DependentUpon>AdminRemoveProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUpdateCategory.aspx.cs">
+      <DependentUpon>AdminUpdateCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUpdateCategory.aspx.designer.cs">
+      <DependentUpon>AdminUpdateCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUpdateProduct.aspx.cs">
+      <DependentUpon>AdminUpdateProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUpdateProduct.aspx.designer.cs">
+      <DependentUpon>AdminUpdateProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminUpdateStatusOrder.aspx.cs">
+      <DependentUpon>AdminUpdateStatusOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUpdateStatusOrder.aspx.designer.cs">
+      <DependentUpon>AdminUpdateStatusOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultAddCart.aspx.cs">
+      <DependentUpon>DefaultAddCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultAddCart.aspx.designer.cs">
+      <DependentUpon>DefaultAddCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultAddOrder.aspx.cs">
+      <DependentUpon>DefaultAddOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultAddOrder.aspx.designer.cs">
+      <DependentUpon>DefaultAddOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultFilterProduct.aspx.cs">
+      <DependentUpon>DefaultFilterProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultFilterProduct.aspx.designer.cs">
+      <DependentUpon>DefaultFilterProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultRemoveProductInCart.aspx.cs">
+      <DependentUpon>DefaultRemoveProductInCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultRemoveProductInCart.aspx.designer.cs">
+      <DependentUpon>DefaultRemoveProductInCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultSelectedTable.aspx.cs">
+      <DependentUpon>DefaultSelectedTable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultSelectedTable.aspx.designer.cs">
+      <DependentUpon>DefaultSelectedTable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Fundamental.Master.cs">
+      <DependentUpon>Fundamental.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Fundamental.Master.designer.cs">
+      <DependentUpon>Fundamental.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Fundamental.Master" />
+    <Content Include="Admin.Master" />
+    <None Include="packages.config" />
+    <Content Include="template\fonts\ElegantIcons.eot" />
+    <Content Include="template\fonts\ElegantIcons.ttf" />
+    <Content Include="template\fonts\ElegantIcons.woff" />
+    <Content Include="template\fonts\fontawesome-webfont.eot" />
+    <Content Include="template\fonts\fontawesome-webfont.ttf" />
+    <Content Include="template\fonts\fontawesome-webfont.woff" />
+    <Content Include="template\fonts\fontawesome-webfont.woff2" />
+    <Content Include="template\fonts\FontAwesome.otf" />
+    <Content Include="template\sass\style.scss" />
+    <Content Include="template\sass\_base.scss" />
+    <Content Include="template\sass\_blog-details.scss" />
+    <Content Include="template\sass\_blog-sidebar.scss" />
+    <Content Include="template\sass\_blog.scss" />
+    <Content Include="template\sass\_breadcrumb.scss" />
+    <Content Include="template\sass\_checkout.scss" />
+    <Content Include="template\sass\_contact.scss" />
+    <Content Include="template\sass\_footer.scss" />
+    <Content Include="template\sass\_header.scss" />
+    <Content Include="template\sass\_hero.scss" />
+    <Content Include="template\sass\_home-page.scss" />
+    <Content Include="template\sass\_mixins.scss" />
+    <Content Include="template\sass\_responsive.scss" />
+    <Content Include="template\sass\_shop-details.scss" />
+    <Content Include="template\sass\_shop-grid.scss" />
+    <Content Include="template\sass\_shoping-cart.scss" />
+    <Content Include="template\sass\_sidebar.scss" />
+    <Content Include="template\sass\_variable.scss" />
+    <Content Include="template\Source\bootstrap-4.4.1-dist.zip" />
+    <Content Include="template\Source\font-awesome-4.7.0.zip" />
+    <Content Include="template\Source\jquery-nice-select-1.1.0.zip" />
+    <Content Include="template\Source\jquery-ui-1.12.1.zip" />
+    <Content Include="template\Source\OwlCarousel2-2.3.4.zip" />
+    <Content Include="template\Source\sass.zip" />
+    <Content Include="template\Source\SlickNav-master.zip" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Proje.Business\Proje.Business.csproj">
+      <Project>{2375e3a8-875a-479c-a7e2-9e7895e47a25}</Project>
+      <Name>Proje.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Proje.DataAccess\Proje.DataAccess.csproj">
+      <Project>{9e4788cd-1853-4e90-b0f4-ce62435cb4a8}</Project>
+      <Name>Proje.DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>63609</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44325/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

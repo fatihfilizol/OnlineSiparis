@@ -1,0 +1,176 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Fundamental.master.cs" Inherits="Proje.Web.Fundamental" %>
+
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ogani Template">
+    <meta name="keywords" content="Ogani, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ogani | Template</title>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link href="template/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="template/css/elegant-icons.css" rel="stylesheet" />
+    <link href="template/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="template/css/jquery-ui.min.css" rel="stylesheet" />
+    <link href="template/css/nice-select.css" rel="stylesheet" />
+    <link href="template/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="template/css/slicknav.min.css" rel="stylesheet" />
+    <link href="template/css/style.css" rel="stylesheet" />
+    <style>/*
+	Filter
+*/
+
+.filterDiv {
+	float: left;
+	color: #ffffff;
+	text-align: center;
+	margin: 2px;
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+.container {
+	margin-top: 20px;
+	overflow: hidden;
+}
+
+/* Style the buttons */
+.btn {
+	border: none;
+	outline: none;
+	padding: 12px 16px;
+	background-color: #f1f1f1;
+	cursor: pointer;
+}
+
+	.btn:hover {
+		background-color: #ddd;
+	}
+
+	.btn.active {
+		background-color: #666;
+		color: white;
+	}</style>
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+    <!-- Header Section Begin -->
+    <header class="header">
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="header__logo">
+                        <a href="./default.aspx"><img src="template/img/logo.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server"></asp:ContentPlaceHolder>
+
+  
+
+   
+
+   
+
+    <!-- Footer Section Begin -->
+    <footer class="footer spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer__about">
+                        <div class="footer__about__logo">
+                            <a href="./index.html"><img src="template/img/logo.png" alt=""></a>
+                        </div>
+                        <ul>
+                            <li>Address: 60-49 Road 11378 New York</li>
+                            <li>Phone: +65 11.188.888</li>
+                            <li>Email: hello@colorlib.com</li>
+                        </ul>
+                    </div>
+                </div>
+               
+            </div>
+           
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script >filterSelection("all")
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("filterDiv");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+            console.log("test");
+        } 
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
+            }
+        }
+
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
+    <script src="template/js/bootstrap.min.js"></script>
+    <script src="template/js/jquery-3.3.1.min.js"></script>
+    <script src="template/js/jquery-ui.min.js"></script>
+    <script src="template/js/jquery.nice-select.min.js"></script>
+    <script src="template/js/jquery.slicknav.js"></script>
+    <script src="template/js/main.js"></script>
+    <script src="template/js/mixitup.min.js"></script>
+    <script src="template/js/owl.carousel.min.js"></script>
+
+
+
+
+</body>
+
+</html>
