@@ -50,7 +50,6 @@
 	border: none;
 	outline: none;
 	padding: 12px 16px;
-	background-color: #f1f1f1;
 	cursor: pointer;
 }
 
@@ -61,7 +60,13 @@
 	.btn.active {
 		background-color: #666;
 		color: white;
-	}</style>
+	}
+
+    .tablenumber{
+        width:80%;
+        height:80%;
+    }
+    </style>
 </head>
 
 <body>

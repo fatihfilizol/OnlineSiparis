@@ -49,7 +49,15 @@ namespace Proje.Web
             order.SaveChanges();
 
 
+            var table = (from x in order.Tables
+                     where x.Id == k
+                     select new
+                     {
+                         x.Id
 
+                     }).ToList();
+            Repeater1.DataSource = table;
+            Repeater1.DataBind();
 
 
         }

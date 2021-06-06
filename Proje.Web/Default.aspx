@@ -3,27 +3,35 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <form runat="server">
-        Masa Numaranız: 
+        <div style="text-align:center">
+        Masa Numaranız 
         <div>
-            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label></div>
-        Kategori Seçiniz: <br />
+            <asp:Label ID="Label1" runat="server" Text="Label" CssClass="btn btn-info"></asp:Label></div>
+        Kategori Seçiniz 
+            <br />
+        
         <asp:Repeater ID="Repeater1" runat="server">
             <ItemTemplate>
-                <asp:HyperLink NavigateUrl='<%#"~/DefaultFilterProduct.aspx?Id=" + Eval("Id") %>' ID="HyperLink2" runat="server" CssClass="btn"><%#Eval("CategoryName") %> </asp:HyperLink>
+                <asp:HyperLink NavigateUrl='<%#"~/DefaultFilterProduct.aspx?Id=" + Eval("Id") %>' ID="HyperLink2" runat="server" CssClass="btn btn-success"><i class="fa fa-list"></i> <%#Eval("CategoryName") %> </asp:HyperLink>
             </ItemTemplate>
-        </asp:Repeater>
+        </asp:Repeater></div>
+        <br />
+        <br />
         <asp:Repeater ID="Repeater2" runat="server">
             <ItemTemplate>
-                <div>
+                <div style="text-align:center">
                    
                     <asp:Image ID="Image1" runat="server" ImageUrl=<%#Eval("Photo") %> CssClass="img-fluid" Height="450px" Width="500px"/> <br />
-                    <asp:HyperLink NavigateUrl='<%#"~/DefaultAddCart.aspx?Id=" + Eval("Id") %>' ID="HyperLink1" runat="server" CssClass="btn btn-warning">Sepete Ekle</asp:HyperLink>
-
+                   
                 </div>
-                <div style="margin-left : 40%"  >  
+                <div style="text-align:center"  >  
                      <%#Eval ("ProductName") %>
                     <br />  
                      <%#Eval ("Price") %>
+                    <br />
+                    <asp:HyperLink NavigateUrl='<%#"~/DefaultAddCart.aspx?Id=" + Eval("Id") %>' ID="HyperLink4" runat="server" CssClass="btn btn-success"><i class="fa fa-shopping-basket"></i> Sepete Ekle</asp:HyperLink>
+                    <br />
+                    <br />
                 </div>
             </ItemTemplate>
         </asp:Repeater>
@@ -41,13 +49,14 @@
                                 <td><%#Eval ("ProductName") %></td>
                                 <td><%#Eval ("Count") %></td>
                                 <td><%#Eval ("Price") %></td>
-                                <td><asp:HyperLink NavigateUrl='<%#"~/DefaultRemoveProductInCart.aspx?Id=" + Eval("Id") %>' ID="HyperLink3" runat="server" CssClass="btn-danger">Sil</asp:HyperLink></td>
+                                <td><asp:HyperLink NavigateUrl='<%#"~/DefaultRemoveProductInCart.aspx?Id=" + Eval("Id") %>' ID="HyperLink3" runat="server" CssClass="btn btn-danger">Sil</asp:HyperLink></td>
 
                             </tr>
                         </ItemTemplate>
                     </asp:Repeater>
                 </table>
-        <asp:HyperLink NavigateUrl='/DefaultAddOrder.aspx' ID="HyperLink1" runat="server" CssClass="btn btn-warning">Siparişi Tamamla</asp:HyperLink>
-
+        <div style="text-align:center">
+        <asp:HyperLink NavigateUrl='/DefaultAddOrder.aspx' ID="HyperLink1" runat="server" CssClass="btn btn-success"><i class="fa fa-check"></i> Siparişi Tamamla</asp:HyperLink>
+        </div>
     </form>
 </asp:Content>
